@@ -16,8 +16,7 @@ def delete_temp_folder(temp_folder):
         shutil.rmtree(temp_folder)
     except PermissionError:
         print("Some files are kept as some processes are using it")
-        print("Please close those applications or wait a bit and then run this script again.")
-        print("Other wise rest all the removed.\n\n")
+        print("Please close those applications and then run this script again.")
         return False
     except FileNotFoundError:
         print("No Temporary files exist!")
